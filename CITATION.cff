@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Bu veri setini kullanırsanız aşağıdaki gibi kaynak gösterin. / If you use this dataset, please cite it as below."
+type: dataset
+title: "Nakliyat Platformu Taşınma Teklifleri Veri Seti"
+authors:
+  - name: "Nakliyat Platformu"
+    website: "https://www.evdennakliyateve.com/"
+version: "2026-10"
+date-released: 2026-11-02
+doi: 10.5281/zenodo.24111331
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24111330
+    description: "Tüm sürümler (kavram DOI) / All versions (concept DOI)"
+  - type: doi
+    value: 10.5281/zenodo.24111331
+    description: "Sürüm 2026-10 / Version 2026-10"
+url: "https://www.evdennakliyateve.com/veri/"
+license: CC-BY-4.0
+keywords:
+  - Türkiye
+  - Turkey
+  - moving quotes
+  - taşınma teklifleri
+  - open data

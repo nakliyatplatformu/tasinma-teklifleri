@@ -1,0 +1,116 @@
+dosya,kolon,tip,birim,tanim_tr,tanim_en
+nakliyat-teklif-araliklari.csv,surum,metin,,Sürüm kimliği: kesim ayı (YYYY-AA); aynı pencerenin düzeltmesi -rN eki alır.,Edition ID: cutoff month (YYYY-MM); corrections of the same window get an -rN suffix.
+nakliyat-teklif-araliklari.csv,pencere_bas,tarih,,"Pencerenin ilk günü (Türkiye saati, dahil).","First day of the window (Turkey time, inclusive)."
+nakliyat-teklif-araliklari.csv,pencere_son,tarih,,Pencerenin son günü (dahil).,Last day of the window (inclusive).
+nakliyat-teklif-araliklari.csv,kapsam,metin,,TR = Türkiye geneli; TR_ISTANBUL_HARIC = İstanbul dışındaki iller; IL = tek il.,TR = Türkiye; TR_ISTANBUL_HARIC = all provinces except İstanbul; IL = single province.
+nakliyat-teklif-araliklari.csv,il_kodu,tamsayi,,İl plaka kodu (yalnız IL satırlarında dolu).,Province licence-plate code (IL rows only).
+nakliyat-teklif-araliklari.csv,il_adi,metin,,İl adı.,Province name.
+nakliyat-teklif-araliklari.csv,ibbs3,metin,,İBBS Düzey 3 kodu (TÜİK).,NUTS-3 (İBBS-3) statistical region code.
+nakliyat-teklif-araliklari.csv,grup,metin,,sehir_ici = çıkış ve varış aynı il; sehirler_arasi = farklı iller (mesafeler karışık).,sehir_ici = same province at both ends; sehirler_arasi = different provinces (distances mixed).
+nakliyat-teklif-araliklari.csv,ev_tipi,metin,,Talepteki ev tipi (oda+salon); tumu = tüm ev tipleri birlikte (listede ayrı satırı olmayan tipler dahil).,Home size (rooms+living room); tumu = all sizes together (including sizes without their own row).
+nakliyat-teklif-araliklari.csv,talep_sayisi,tamsayi,adet,Hücredeki talep sayısı: aynı müşterinin aynı güzergâh ve ev tipiyle birbirini en çok 14 gün arayla izleyen talepleri tek sayılır; yalnız en az bir geçerli teklif alan talepler; 10'a yuvarlanmış.,Requests in the cell after merging a customer's repeat requests (same route and home size within 14 days); only requests with at least one valid quote.
+nakliyat-teklif-araliklari.csv,teklif_sayisi,tamsayi,adet,Hesaba giren teklif sayısı: her nakliyecinin talep başına son teklifi; 5.000–500.000 TL dışı teklifler hariç; 10'a yuvarlanmış.,"Quotes counted: each mover's latest quote per request; quotes outside 5,000–500,000 TL excluded."
+nakliyat-teklif-araliklari.csv,firma_sayisi,tamsayi,adet,Teklif veren farklı nakliyeci hesabı sayısı; 10'a yuvarlanmış.,"Distinct mover accounts that quoted, rounded to 10."
+nakliyat-teklif-araliklari.csv,teklif_p10_tl,tamsayi,TL,Tekliflerin %10'u bu tutarın altında; yalnız en az 100 talepli hücrelerde.,10th percentile of quotes; only in cells with at least 100 requests.
+nakliyat-teklif-araliklari.csv,teklif_p25_tl,tamsayi,TL,Tekliflerin ortadaki yarısının alt sınırı (%25).,Lower bound of the middle half of quotes (25th percentile).
+nakliyat-teklif-araliklari.csv,teklif_ortanca_tl,tamsayi,TL,"Ortanca teklif: tekliflerin yarısı bu tutarın altında, yarısı üstünde. Anlaşılan veya ödenen fiyat değildir.","Median quote: half of the quotes are below, half above. Not an agreed or paid price."
+nakliyat-teklif-araliklari.csv,teklif_p75_tl,tamsayi,TL,Tekliflerin ortadaki yarısının üst sınırı (%75).,Upper bound of the middle half of quotes (75th percentile).
+nakliyat-teklif-araliklari.csv,teklif_p90_tl,tamsayi,TL,Tekliflerin %90'ı bu tutarın altında; yalnız en az 100 talepli hücrelerde.,90th percentile of quotes; only in cells with at least 100 requests.
+nakliyat-teklif-araliklari.csv,talep_bazli_ortanca_tl,tamsayi,TL,"Her talebin kendi tekliflerinin ortancası alınır, bu değerlerin ortancası verilir; çok teklif alan taleplerin ağırlığını dengeler.",Median of per-request median quotes; offsets the weight of requests that received many quotes.
+nakliyat-teklif-araliklari.csv,guven,metin,,"Talep sayısına göre güven etiketi: 20–49 sınırlı, 50–199 orta, 200 ve üstü geniş.","Confidence label by request count: 20–49 sınırlı (limited), 50–199 orta (medium), 200+ geniş (broad)."
+nakliyat-teklif-araliklari.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
+guzergah-teklifleri.csv,surum,metin,,Sürüm kimliği: kesim ayı (YYYY-AA); aynı pencerenin düzeltmesi -rN eki alır.,Edition ID: cutoff month (YYYY-MM); corrections of the same window get an -rN suffix.
+guzergah-teklifleri.csv,pencere_bas,tarih,,"Pencerenin ilk günü (Türkiye saati, dahil).","First day of the window (Turkey time, inclusive)."
+guzergah-teklifleri.csv,pencere_son,tarih,,Pencerenin son günü (dahil).,Last day of the window (inclusive).
+guzergah-teklifleri.csv,il_a_kodu,tamsayi,,Güzergâhın plaka kodu küçük olan ili; yön ayrımı yoktur (iki yön birlikte).,Province with the lower plate code; routes are undirected (both directions together).
+guzergah-teklifleri.csv,il_a_adi,metin,,il_a_kodu ilinin adı.,Name of province il_a_kodu.
+guzergah-teklifleri.csv,il_b_kodu,tamsayi,,Güzergâhın plaka kodu büyük olan ili.,Province with the higher plate code.
+guzergah-teklifleri.csv,il_b_adi,metin,,il_b_kodu ilinin adı.,Name of province il_b_kodu.
+guzergah-teklifleri.csv,ev_tipi,metin,,tumu = tüm ev tipleri; bir ev tipi ancak tek başına eşikleri geçerse ayrı satır alır.,tumu = all sizes; a size gets its own row only if it passes the thresholds on its own.
+guzergah-teklifleri.csv,talep_sayisi,tamsayi,adet,Hücredeki talep sayısı: aynı müşterinin aynı güzergâh ve ev tipiyle birbirini en çok 14 gün arayla izleyen talepleri tek sayılır; yalnız en az bir geçerli teklif alan talepler; 10'a yuvarlanmış.,Requests in the cell after merging a customer's repeat requests (same route and home size within 14 days); only requests with at least one valid quote.
+guzergah-teklifleri.csv,teklif_sayisi,tamsayi,adet,Hesaba giren teklif sayısı: her nakliyecinin talep başına son teklifi; 5.000–500.000 TL dışı teklifler hariç; 10'a yuvarlanmış.,"Quotes counted: each mover's latest quote per request; quotes outside 5,000–500,000 TL excluded."
+guzergah-teklifleri.csv,firma_sayisi,tamsayi,adet,Teklif veren farklı nakliyeci hesabı sayısı; 10'a yuvarlanmış.,"Distinct mover accounts that quoted, rounded to 10."
+guzergah-teklifleri.csv,teklif_p25_tl,tamsayi,TL,Tekliflerin ortadaki yarısının alt sınırı (%25).,Lower bound of the middle half of quotes (25th percentile).
+guzergah-teklifleri.csv,teklif_ortanca_tl,tamsayi,TL,"Ortanca teklif: tekliflerin yarısı bu tutarın altında, yarısı üstünde. Anlaşılan veya ödenen fiyat değildir.","Median quote: half of the quotes are below, half above. Not an agreed or paid price."
+guzergah-teklifleri.csv,teklif_p75_tl,tamsayi,TL,Tekliflerin ortadaki yarısının üst sınırı (%75).,Upper bound of the middle half of quotes (75th percentile).
+guzergah-teklifleri.csv,talep_bazli_ortanca_tl,tamsayi,TL,"Her talebin kendi tekliflerinin ortancası alınır, bu değerlerin ortancası verilir; çok teklif alan taleplerin ağırlığını dengeler.",Median of per-request median quotes; offsets the weight of requests that received many quotes.
+guzergah-teklifleri.csv,guven,metin,,"Talep sayısına göre güven etiketi: 20–49 sınırlı, 50–199 orta, 200 ve üstü geniş.","Confidence label by request count: 20–49 sınırlı (limited), 50–199 orta (medium), 200+ geniş (broad)."
+guzergah-teklifleri.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
+teklif-deneyimi.csv,surum,metin,,Sürüm kimliği: kesim ayı (YYYY-AA); aynı pencerenin düzeltmesi -rN eki alır.,Edition ID: cutoff month (YYYY-MM); corrections of the same window get an -rN suffix.
+teklif-deneyimi.csv,pencere_bas,tarih,,"Pencerenin ilk günü (Türkiye saati, dahil).","First day of the window (Turkey time, inclusive)."
+teklif-deneyimi.csv,pencere_son,tarih,,Pencerenin son günü (dahil).,Last day of the window (inclusive).
+teklif-deneyimi.csv,kapsam,metin,,TR = Türkiye geneli; IL = tek il.,TR = Türkiye; IL = single province.
+teklif-deneyimi.csv,il_kodu,tamsayi,,İl plaka kodu (yalnız IL satırlarında dolu).,Province licence-plate code (IL rows only).
+teklif-deneyimi.csv,il_adi,metin,,İl adı.,Province name.
+teklif-deneyimi.csv,ibbs3,metin,,İBBS Düzey 3 kodu (TÜİK).,NUTS-3 (İBBS-3) statistical region code.
+teklif-deneyimi.csv,grup,metin,,sehir_ici veya sehirler_arasi.,sehir_ici or sehirler_arasi.
+teklif-deneyimi.csv,talep_sayisi,tamsayi,adet,"Tüm talepler (mükerrerler birleştirilmiş), teklif almayanlar dahil.","All requests (repeats merged), including those with no quote."
+teklif-deneyimi.csv,teklif_alan_yuzde,tamsayi,yuzde,En az bir teklif alan taleplerin payı (fiyatı ne olursa olsun).,Share of requests that received at least one quote (any amount).
+teklif-deneyimi.csv,talep_basina_teklif_p25,tamsayi,adet,Talep başına teklif veren farklı nakliyeci sayısının %25 değeri; sıfırlar dahil.,25th percentile of distinct movers quoting per request; zeros included.
+teklif-deneyimi.csv,talep_basina_teklif_ortanca,tamsayi,adet,Talep başına teklif veren farklı nakliyeci sayısının ortancası; sıfırlar dahil.,Median number of distinct movers quoting per request; zeros included.
+teklif-deneyimi.csv,talep_basina_teklif_p75,tamsayi,adet,Talep başına teklif veren farklı nakliyeci sayısının %75 değeri; sıfırlar dahil.,75th percentile of distinct movers quoting per request; zeros included.
+teklif-deneyimi.csv,ilk_teklif_ortanca_dk,tamsayi,dakika,"En az bir teklif alan taleplerde, ilk talep açılışından ilk teklife kadar geçen sürenin ortancası. Tek bir nakliyeci ilk teklifi bu taleplerin %25'inden fazlasında verdiyse boş bırakılır.","Median minutes from the first request to the first quote, among requests with a quote. Left empty if one mover sent the first quote in more than 25% of them."
+teklif-deneyimi.csv,ilk_1_saatte_teklif_yuzde,tamsayi,yuzde,İlk teklifi 60 dakika içinde gelen taleplerin payı; payda tüm talepler. Aynı %25 kuralıyla boş kalabilir.,Share of requests whose first quote arrived within 60 minutes; denominator is all requests. May be empty under the same 25% rule.
+teklif-deneyimi.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
+kat-etkisi.csv,surum,metin,,Sürüm kimliği: kesim ayı (YYYY-AA); aynı pencerenin düzeltmesi -rN eki alır.,Edition ID: cutoff month (YYYY-MM); corrections of the same window get an -rN suffix.
+kat-etkisi.csv,pencere_bas,tarih,,"Pencerenin ilk günü (Türkiye saati, dahil).","First day of the window (Turkey time, inclusive)."
+kat-etkisi.csv,pencere_son,tarih,,Pencerenin son günü (dahil).,Last day of the window (inclusive).
+kat-etkisi.csv,kapsam,metin,,TR = Türkiye geneli.,TR = Türkiye.
+kat-etkisi.csv,grup,metin,,sehir_ici = çıkış ve varış aynı il.,sehir_ici = same province at both ends.
+kat-etkisi.csv,ev_tipi,metin,,Talepteki ev tipi; bu tabloda yalnız 2+1 ve 3+1.,Home size; only 2+1 and 3+1 in this table.
+kat-etkisi.csv,kat_grubu,metin,,merdiven_en_fazla_3_kat = en az bir uçta eşya merdivenle taşınıyor ve merdivenli uçların en yüksek katı 3 veya altı (zemin ve bodrum dahil); merdiven_4_kat_ve_uzeri = merdivenli uçların en yüksek katı 4 veya üstü; iki_ucta_bina_asansoru = iki uçta da bina asansörü. Kat ve taşıma yolu talebin ilk kaydından; modüler (dış cephe) asansör istenen ya da taşıma yolu veya merdivenli ucun katı okunamayan talepler bu tabloya girmez.,"merdiven_en_fazla_3_kat = stairs at one or both ends, highest stair floor 3 or lower (ground and basement included); merdiven_4_kat_ve_uzeri = highest stair floor 4 or above; iki_ucta_bina_asansoru = building lift at both ends. Requests asking for an external (modular) lift, or with an unreadable carry method or stair floor, are excluded."
+kat-etkisi.csv,talep_sayisi,tamsayi,adet,Hücredeki talep sayısı: aynı müşterinin aynı güzergâh ve ev tipiyle birbirini en çok 14 gün arayla izleyen talepleri tek sayılır; yalnız en az bir geçerli teklif alan talepler; 10'a yuvarlanmış.,Requests in the cell after merging a customer's repeat requests (same route and home size within 14 days); only requests with at least one valid quote.
+kat-etkisi.csv,teklif_sayisi,tamsayi,adet,Hesaba giren teklif sayısı: her nakliyecinin talep başına son teklifi; 5.000–500.000 TL dışı teklifler hariç; 10'a yuvarlanmış.,"Quotes counted: each mover's latest quote per request; quotes outside 5,000–500,000 TL excluded."
+kat-etkisi.csv,firma_sayisi,tamsayi,adet,Teklif veren farklı nakliyeci hesabı sayısı; 10'a yuvarlanmış.,"Distinct mover accounts that quoted, rounded to 10."
+kat-etkisi.csv,teklif_p25_tl,tamsayi,TL,Tekliflerin ortadaki yarısının alt sınırı (%25).,Lower bound of the middle half of quotes (25th percentile).
+kat-etkisi.csv,teklif_ortanca_tl,tamsayi,TL,"Ortanca teklif: tekliflerin yarısı bu tutarın altında, yarısı üstünde. Anlaşılan veya ödenen fiyat değildir.","Median quote: half of the quotes are below, half above. Not an agreed or paid price."
+kat-etkisi.csv,teklif_p75_tl,tamsayi,TL,Tekliflerin ortadaki yarısının üst sınırı (%75).,Upper bound of the middle half of quotes (75th percentile).
+kat-etkisi.csv,talep_bazli_ortanca_tl,tamsayi,TL,"Her talebin kendi tekliflerinin ortancası alınır, bu değerlerin ortancası verilir; çok teklif alan taleplerin ağırlığını dengeler.",Median of per-request median quotes; offsets the weight of requests that received many quotes.
+kat-etkisi.csv,guven,metin,,"Talep sayısına göre güven etiketi: 20–49 sınırlı, 50–199 orta, 200 ve üstü geniş.","Confidence label by request count: 20–49 sınırlı (limited), 50–199 orta (medium), 200+ geniş (broad)."
+kat-etkisi.csv,not,metin,,Zorunlu not: bina tipi karışıyor; gruplar arasındaki fark kat ya da asansörün etkisi veya asansör ücreti olarak okunamaz.,"Mandatory note: building types are mixed; differences between groups are not the effect of floor or lift, nor a lift fee."
+kat-etkisi.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
+ilce-teklifleri.csv,surum,metin,,Sürüm kimliği: kesim ayı (YYYY-AA); aynı pencerenin düzeltmesi -rN eki alır.,Edition ID: cutoff month (YYYY-MM); corrections of the same window get an -rN suffix.
+ilce-teklifleri.csv,pencere_bas,tarih,,"Pencerenin ilk günü (Türkiye saati, dahil).","First day of the window (Turkey time, inclusive)."
+ilce-teklifleri.csv,pencere_son,tarih,,Pencerenin son günü (dahil).,Last day of the window (inclusive).
+ilce-teklifleri.csv,il_kodu,tamsayi,,İlçenin bağlı olduğu ilin plaka kodu.,Plate code of the province.
+ilce-teklifleri.csv,il_adi,metin,,İl adı.,Province name.
+ilce-teklifleri.csv,ibbs3,metin,,İlin İBBS Düzey 3 kodu (TÜİK).,NUTS-3 (İBBS-3) code of the province.
+ilce-teklifleri.csv,ilce_adi,metin,,"Çıkış ilçesi (resmî ilçe listesindeki yazımıyla). Talepteki serbest metin resmî listeye eşlenir; eşlenemeyen talepler ve ""Merkez"" ilçeleri bu tabloya girmez.","Origin district (official spelling). Free-text districts are matched to the official list; unmatched requests and ""Merkez"" districts are excluded."
+ilce-teklifleri.csv,grup,metin,,sehir_ici = varış da aynı ilde (ilçeden başlayıp il içinde kalan talepler).,sehir_ici = destination in the same province.
+ilce-teklifleri.csv,ev_tipi,metin,,tumu = tüm ev tipleri birlikte; ilçe × ev tipi hücresi yayımlanmaz (talep sayısı yetmiyor).,tumu = all home sizes together; district × size cells are not published.
+ilce-teklifleri.csv,en_cok_ev_tipi,metin,,"Hücredeki taleplerde en sık görülen ev tipi. Ev tipi dağılımının tamamı yayımlanmaz; rakam bu karışıma bağlıdır, ilçeler birbiriyle kıyaslanmamalıdır.","Most common home size among the requests in the cell. The full size mix is not published; figures depend on it, so districts should not be compared."
+ilce-teklifleri.csv,en_cok_ev_tipi_yuzde,tamsayi,yuzde,En sık ev tipinin hücredeki taleplerdeki payı.,Share of the most common home size among the requests.
+ilce-teklifleri.csv,talep_sayisi,tamsayi,adet,Hücredeki talep sayısı: aynı müşterinin aynı güzergâh ve ev tipiyle birbirini en çok 14 gün arayla izleyen talepleri tek sayılır; yalnız en az bir geçerli teklif alan talepler; 10'a yuvarlanmış.,Requests in the cell after merging a customer's repeat requests (same route and home size within 14 days); only requests with at least one valid quote.
+ilce-teklifleri.csv,teklif_sayisi,tamsayi,adet,Hesaba giren teklif sayısı: her nakliyecinin talep başına son teklifi; 5.000–500.000 TL dışı teklifler hariç; 10'a yuvarlanmış.,"Quotes counted: each mover's latest quote per request; quotes outside 5,000–500,000 TL excluded."
+ilce-teklifleri.csv,firma_sayisi,tamsayi,adet,Teklif veren farklı nakliyeci hesabı sayısı; 10'a yuvarlanmış.,"Distinct mover accounts that quoted, rounded to 10."
+ilce-teklifleri.csv,teklif_p25_tl,tamsayi,TL,Tekliflerin ortadaki yarısının alt sınırı (%25).,Lower bound of the middle half of quotes (25th percentile).
+ilce-teklifleri.csv,teklif_ortanca_tl,tamsayi,TL,"Ortanca teklif: tekliflerin yarısı bu tutarın altında, yarısı üstünde. Anlaşılan veya ödenen fiyat değildir.","Median quote: half of the quotes are below, half above. Not an agreed or paid price."
+ilce-teklifleri.csv,teklif_p75_tl,tamsayi,TL,Tekliflerin ortadaki yarısının üst sınırı (%75).,Upper bound of the middle half of quotes (75th percentile).
+ilce-teklifleri.csv,talep_bazli_ortanca_tl,tamsayi,TL,"Her talebin kendi tekliflerinin ortancası alınır, bu değerlerin ortancası verilir; çok teklif alan taleplerin ağırlığını dengeler.",Median of per-request median quotes; offsets the weight of requests that received many quotes.
+ilce-teklifleri.csv,guven,metin,,"Talep sayısına göre güven etiketi: 20–49 sınırlı, 50–199 orta, 200 ve üstü geniş.","Confidence label by request count: 20–49 sınırlı (limited), 50–199 orta (medium), 200+ geniş (broad)."
+ilce-teklifleri.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
+mesafe-bandi-teklifleri.csv,surum,metin,,Sürüm kimliği: kesim ayı (YYYY-AA); aynı pencerenin düzeltmesi -rN eki alır.,Edition ID: cutoff month (YYYY-MM); corrections of the same window get an -rN suffix.
+mesafe-bandi-teklifleri.csv,pencere_bas,tarih,,"Pencerenin ilk günü (Türkiye saati, dahil).","First day of the window (Turkey time, inclusive)."
+mesafe-bandi-teklifleri.csv,pencere_son,tarih,,Pencerenin son günü (dahil).,Last day of the window (inclusive).
+mesafe-bandi-teklifleri.csv,grup,metin,,sehirler_arasi = çıkış ve varış farklı illerde.,sehirler_arasi = different provinces.
+mesafe-bandi-teklifleri.csv,mesafe_bandi,metin,,"Çıkış ve varış illerinin merkezleri arasındaki karayolu mesafesinin bandı (km): 0-150, 150-300, 300-500, 500-750, 750-1000, 1000-1300, 1300+. Adres düzeyinde mesafe değildir; km değerleri yayımlanmaz. İl çifti için ölçülmüş mesafe yoksa talep bu tabloya girmez.",Band of the road distance between the two provincial centres (km). Not address-level distance; km values are not published. Requests whose province pair has no measured distance are excluded.
+mesafe-bandi-teklifleri.csv,bant_alt_km,tamsayi,km,Bandın alt sınırı (dahil).,Lower bound of the band (inclusive).
+mesafe-bandi-teklifleri.csv,bant_ust_km,tamsayi,km,Bandın üst sınırı (hariç); son bantta boş.,Upper bound of the band (exclusive); empty for the last band.
+mesafe-bandi-teklifleri.csv,ev_tipi,metin,,tumu = tüm ev tipleri birlikte; bir ev tipi ancak tek başına eşikleri geçerse ayrı satır alır.,tumu = all sizes; a size gets its own row only if it passes the thresholds on its own.
+mesafe-bandi-teklifleri.csv,talep_sayisi,tamsayi,adet,Hücredeki talep sayısı: aynı müşterinin aynı güzergâh ve ev tipiyle birbirini en çok 14 gün arayla izleyen talepleri tek sayılır; yalnız en az bir geçerli teklif alan talepler; 10'a yuvarlanmış.,Requests in the cell after merging a customer's repeat requests (same route and home size within 14 days); only requests with at least one valid quote.
+mesafe-bandi-teklifleri.csv,teklif_sayisi,tamsayi,adet,Hesaba giren teklif sayısı: her nakliyecinin talep başına son teklifi; 5.000–500.000 TL dışı teklifler hariç; 10'a yuvarlanmış.,"Quotes counted: each mover's latest quote per request; quotes outside 5,000–500,000 TL excluded."
+mesafe-bandi-teklifleri.csv,firma_sayisi,tamsayi,adet,Teklif veren farklı nakliyeci hesabı sayısı; 10'a yuvarlanmış.,"Distinct mover accounts that quoted, rounded to 10."
+mesafe-bandi-teklifleri.csv,teklif_p25_tl,tamsayi,TL,Tekliflerin ortadaki yarısının alt sınırı (%25).,Lower bound of the middle half of quotes (25th percentile).
+mesafe-bandi-teklifleri.csv,teklif_ortanca_tl,tamsayi,TL,"Ortanca teklif: tekliflerin yarısı bu tutarın altında, yarısı üstünde. Anlaşılan veya ödenen fiyat değildir.","Median quote: half of the quotes are below, half above. Not an agreed or paid price."
+mesafe-bandi-teklifleri.csv,teklif_p75_tl,tamsayi,TL,Tekliflerin ortadaki yarısının üst sınırı (%75).,Upper bound of the middle half of quotes (75th percentile).
+mesafe-bandi-teklifleri.csv,talep_bazli_ortanca_tl,tamsayi,TL,"Her talebin kendi tekliflerinin ortancası alınır, bu değerlerin ortancası verilir; çok teklif alan taleplerin ağırlığını dengeler.",Median of per-request median quotes; offsets the weight of requests that received many quotes.
+mesafe-bandi-teklifleri.csv,guven,metin,,"Talep sayısına göre güven etiketi: 20–49 sınırlı, 50–199 orta, 200 ve üstü geniş.","Confidence label by request count: 20–49 sınırlı (limited), 50–199 orta (medium), 200+ geniş (broad)."
+mesafe-bandi-teklifleri.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
+platform-sayilari.csv,surum,metin,,Sürüm kimliği.,Edition ID.
+platform-sayilari.csv,pencere_bas,tarih,,Göstergenin sayım penceresinin ilk günü; anlık sayımlarda boş.,First day of the counting window; empty for point-in-time counts.
+platform-sayilari.csv,pencere_son,tarih,,Sayım penceresinin son günü; anlık sayımlarda boş.,Last day of the counting window; empty for point-in-time counts.
+platform-sayilari.csv,olcum_tarihi,tarih,,Ölçümün yapıldığı ya da dayandığı gün.,Date the count was taken or refers to.
+platform-sayilari.csv,gosterge,metin,,kayitli_nakliyeci_hesabi · son_90_gunde_teklif_veren_hesap · donemde_teklif_veren_hesap.,Indicator: registered mover accounts · accounts quoting in the last 90 days · accounts quoting in the window.
+platform-sayilari.csv,deger,tamsayi,adet,Hesap sayısı (firma sayısı değil).,Number of accounts (not firms).
+platform-sayilari.csv,tanim,metin,,Göstergenin tanımı.,Definition of the indicator.
+platform-sayilari.csv,kaynak,metin,,Kaynak gösterimi ve lisans (CC BY 4.0).,Attribution line and licence (CC BY 4.0).
